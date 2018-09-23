@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def daggerversion='2.17'
+
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -30,4 +33,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //add DI dependencies for dagger.
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerversion"
+    implementation "com.google.dagger:dagger:$daggerversion"
 }

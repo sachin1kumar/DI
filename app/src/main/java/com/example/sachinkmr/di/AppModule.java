@@ -27,7 +27,7 @@ public class AppModule {
     }
 
     @Provides @Singleton
-    SharedPreferences proivdeSharedPreference(Context context){
+    SharedPreferences provideSharedPref(Context context){
         return context.getSharedPreferences("MyPref",Context.MODE_PRIVATE);
     }
 
